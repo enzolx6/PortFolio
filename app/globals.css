@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes gradient-border {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.card-gradient {
+  position: relative;
+  border-radius: 0.75rem; /* rounded-xl */
+}
+
+.card-gradient::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px; /* ÉPAISSEUR DU CONTOUR */
+  border-radius: inherit;
+  background: linear-gradient(
+    90deg,
+    #60a5fa,
+    #a855f7,
+    #ec4899
+  );
+  background-size: 300% 300%;
+  animation: gradient-border 4s ease infinite;
+
+  /* MASQUE = clé du problème */
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card-gradient:hover::before {
+  opacity: 1;
+}
+
+.bg-gradient-dots {
+  background-color: #0b0218; /* fond principal */
+
+  background-image:
+    /* Dégradé haut */
+    radial-gradient(circle at top, rgba(149, 0, 255, 0.15), transparent 65%),
+    /* Dégradé bas */
+    radial-gradient(circle at bottom, rgba(168,85,247,0.18), transparent 45%),
+    /* Points */
+    radial-gradient(rgba(255,255,255,0.08) 1px, transparent 1px);
+
+  background-size:
+    100% 100%,
+    100% 100%,
+    24px 24px;
+}
+
+.bg-vignette {
+  position: relative;
+}
+
+.bg-vignette::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0) 55%,
+    rgba(0, 0, 0, 0.05) 100%
+  );
+}
+
+@keyframes pulse-shape {
+  0% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.1) rotate(180deg); }
+  100% { transform: scale(1) rotate(360deg); }
+}
+
+
+
