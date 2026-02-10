@@ -1,0 +1,12 @@
+:HL["/_next/static/chunks/5d3cb43841d7f4b7.css","style"]
+:HL["/_next/static/media/e8f2fbee2754df70-s.p.9b7a96b4.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/img/BeauxMurs.png","image"]
+:HL["/icons/web.png","image"]
+:HL["/img/myCourses.png","image"]
+:HL["/icons/github.png","image"]
+:HL["/icons/github-white.png","image"]
+:HL["/icons/behance-white.png","image"]
+:HL["/icons/mail-white.png","image"]
+:HL["/img/TrailFeels.png","image"]
+:HL["/icons/figma.png","image"]
+0:{"buildId":"1OGTiR0cM447kJla1NjUq","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
